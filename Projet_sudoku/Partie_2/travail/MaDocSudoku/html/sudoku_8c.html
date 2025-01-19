@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ma documentation sudoku: Référence du fichier sudoku.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Ma documentation sudoku
+   </div>
+   <div id="projectbrief">Jeu de sudoku en c</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier sudoku.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>programme jeu de sudoku  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de sudoku.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="sudoku_8c__incl.png" border="0" usemap="#asudoku_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0240ac851181b84ac374872dc5434ee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a0240ac851181b84ac374872dc5434ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour la hauteur et la largeur d'un bloc  <a href="sudoku_8c.html#a0240ac851181b84ac374872dc5434ee4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0240ac851181b84ac374872dc5434ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b29335add3a553ed85d0e3ace85629c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#a7b29335add3a553ed85d0e3ace85629c">TAILLE</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:a7b29335add3a553ed85d0e3ace85629c"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour la taille d'un bloc  <a href="sudoku_8c.html#a7b29335add3a553ed85d0e3ace85629c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7b29335add3a553ed85d0e3ace85629c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a1b89d9af8baea27f48663c416006e88f"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a>[<a class="el" href="sudoku_8c.html#a7b29335add3a553ed85d0e3ace85629c">TAILLE</a>][<a class="el" href="sudoku_8c.html#a7b29335add3a553ed85d0e3ace85629c">TAILLE</a>]</td></tr>
+<tr class="memdesc:a1b89d9af8baea27f48663c416006e88f"><td class="mdescLeft">&#160;</td><td class="mdescRight">type tableau a deux dimensions de taille TAILLE*TAILLE  <a href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1b89d9af8baea27f48663c416006e88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aeba1131f364a3385e30901935e57cd87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#aeba1131f364a3385e30901935e57cd87">afficherGrille</a> (<a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a> g)</td></tr>
+<tr class="memdesc:aeba1131f364a3385e30901935e57cd87"><td class="mdescLeft">&#160;</td><td class="mdescRight">affiche la grille.  <a href="sudoku_8c.html#aeba1131f364a3385e30901935e57cd87">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aeba1131f364a3385e30901935e57cd87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69cd9f7235b48c38f0b77af85ab869b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#a69cd9f7235b48c38f0b77af85ab869b9">chargerGrille</a> (<a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a> g)</td></tr>
+<tr class="memdesc:a69cd9f7235b48c38f0b77af85ab869b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">recuperation de la grille appeler.  <a href="sudoku_8c.html#a69cd9f7235b48c38f0b77af85ab869b9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a69cd9f7235b48c38f0b77af85ab869b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Programme principal.  <a href="sudoku_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7528186280906209cca4449a1cf34f7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#a7528186280906209cca4449a1cf34f7b">possible</a> (<a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a> g, int ligne, int colonne, int valeur)</td></tr>
+<tr class="memdesc:a7528186280906209cca4449a1cf34f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui indique si il est possible d'insérer une valeur  <a href="sudoku_8c.html#a7528186280906209cca4449a1cf34f7b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7528186280906209cca4449a1cf34f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6fc07a99dec24e9310efd926772c51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#a2c6fc07a99dec24e9310efd926772c51">saisir</a> (int *adr_valeur)</td></tr>
+<tr class="memdesc:a2c6fc07a99dec24e9310efd926772c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet de saisir un valeur entre 1 et 9  <a href="sudoku_8c.html#a2c6fc07a99dec24e9310efd926772c51">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2c6fc07a99dec24e9310efd926772c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a97c0e261ecc279508c087825e1b10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8c.html#a16a97c0e261ecc279508c087825e1b10">zeroDansGrille</a> (<a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a> g)</td></tr>
+<tr class="memdesc:a16a97c0e261ecc279508c087825e1b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui indique si il reste un zero dans la grille.  <a href="sudoku_8c.html#a16a97c0e261ecc279508c087825e1b10">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a16a97c0e261ecc279508c087825e1b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >programme jeu de sudoku </p>
+<dl class="section author"><dt>Auteur</dt><dd>Evan Larose</dd></dl>
+<p>Ce programme propose de jouer une partie de sudoku dans le terminal en appelant une des 10 grilles disponibles </p>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="a0240ac851181b84ac374872dc5434ee4" name="a0240ac851181b84ac374872dc5434ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0240ac851181b84ac374872dc5434ee4">&#9670;&nbsp;</a></span>N</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour la hauteur et la largeur d'un bloc </p>
+
+</div>
+</div>
+<a id="a7b29335add3a553ed85d0e3ace85629c" name="a7b29335add3a553ed85d0e3ace85629c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b29335add3a553ed85d0e3ace85629c">&#9670;&nbsp;</a></span>TAILLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TAILLE&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour la taille d'un bloc </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="a1b89d9af8baea27f48663c416006e88f" name="a1b89d9af8baea27f48663c416006e88f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b89d9af8baea27f48663c416006e88f">&#9670;&nbsp;</a></span>tGrille</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tGrille</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>type tableau a deux dimensions de taille TAILLE*TAILLE </p>
+<p >Le type tGrille sert de de stockage pour la grille de sudoku </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="aeba1131f364a3385e30901935e57cd87" name="aeba1131f364a3385e30901935e57cd87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba1131f364a3385e30901935e57cd87">&#9670;&nbsp;</a></span>afficherGrille()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficherGrille </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a>&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>affiche la grille. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>: grille a afficher.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>procedure qui affiche la grille passée en paramètre. </p>
+
+</div>
+</div>
+<a id="a69cd9f7235b48c38f0b77af85ab869b9" name="a69cd9f7235b48c38f0b77af85ab869b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69cd9f7235b48c38f0b77af85ab869b9">&#9670;&nbsp;</a></span>chargerGrille()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chargerGrille </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a>&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>recuperation de la grille appeler. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>: grille a recuperer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>recuperation de la grille à partir d'un fichier dont le nom est lu au clavier. </p>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Programme principal. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Code de sortie du programme (0 : sortie normale).</dd></dl>
+<p>Le programme principal charge la grille puis l'affiche. Il demande ensuite la saisie de la ligne et de la colonne et teste si la case est vide ou non. Si la case est vide il demande la saisie de la valeur a insérer, puis teste la possibilité de le placé dans la case. Puis il repete les actions de l'affichage a la verification de la possibilite d'insertion tant qu'il y a un zero dans la grille. Enfin quand il n'y a plus de zero dans la grille il affiche la grille et un message de fin de partie. </p>
+
+</div>
+</div>
+<a id="a7528186280906209cca4449a1cf34f7b" name="a7528186280906209cca4449a1cf34f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7528186280906209cca4449a1cf34f7b">&#9670;&nbsp;</a></span>possible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool possible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a>&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ligne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui indique si il est possible d'insérer une valeur </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>: grille a verifier </td></tr>
+    <tr><td class="paramname">ligne</td><td>: ligne a verifier </td></tr>
+    <tr><td class="paramname">colonne</td><td>: colonne a verifier </td></tr>
+    <tr><td class="paramname">val</td><td>: valeur a inserer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si possible d'inserer la valeur false sinon</dd></dl>
+<p>fonction qui indique si il est possible d'insérer une valeur a la case indiquée en verifiant la presence de la valeur sur la ligne, la colonne et le bloc de cette case </p>
+
+</div>
+</div>
+<a id="a2c6fc07a99dec24e9310efd926772c51" name="a2c6fc07a99dec24e9310efd926772c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6fc07a99dec24e9310efd926772c51">&#9670;&nbsp;</a></span>saisir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void saisir </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>adr_val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>permet de saisir un valeur entre 1 et 9 </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adr_val</td><td>: valeur saisie au clavier</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>procedure permettant de saisir les valeurs de colonne, ligne et valeur à insérer </p>
+
+</div>
+</div>
+<a id="a16a97c0e261ecc279508c087825e1b10" name="a16a97c0e261ecc279508c087825e1b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16a97c0e261ecc279508c087825e1b10">&#9670;&nbsp;</a></span>zeroDansGrille()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool zeroDansGrille </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sudoku_8c.html#a1b89d9af8baea27f48663c416006e88f">tGrille</a>&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui indique si il reste un zero dans la grille. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>: grille a verifier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si il reste un zero, false sinon.</dd></dl>
+<p>fonction qui verifie si la grille est remplie ou non en verifiant la présence d'un zero </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

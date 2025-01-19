@@ -1,0 +1,63 @@
+procédure ajouterCandidat(entF/sortF laCase : tCase1, entF val:entier)
+debut
+    i : entier;
+    i := 1;
+    tant que i != 0 faire
+        si laCase.candidats[i] == 0 alors
+            laCase.candidats[i] := val;
+            i := -1;
+        fin si
+        i := i + 1;
+    fin faire
+fin
+
+procédure retirerCandidat(entF/sortF laCase : tCase1, entF val : entier)
+debut
+    i1, i2 : entier;
+    i1 := 1;
+    i2 := 1;
+    
+fin
+
+//**************** tCase2 ****************//
+
+//**************** Algorithme ****************//
+
+programme deduction
+    g : tGrille;
+    progression : booléen;
+    nbCasesVides : entier;
+
+    nbCasesVides = chargerGrille(g);
+    initialiserCandidats(g);
+    progression = true;
+
+    tant que (nbCaseVides != 0 ET progression) faire
+        progression = false;
+
+        // technique du singleton nu
+        pour i de 1 à nbCandidats(entE laCase : tCase) faire
+            si nbCandidats(entE laCase : tCase) alors
+                • affecter ce candidat à la case
+                • nbCasesVides = nbCasesVides – 1;
+                • retirer ce candidat de toutes les cases de la
+                  même ligne, de la même colonne et du même bloc
+                • progression = true;
+            finsi
+        finfaire
+
+        // technique du singleton caché
+        ...
+
+        // autres techniques...
+        ...
+
+    finfaire
+fin
+
+//**************** afficherStats ****************//
+
+procédure afficherStats() c'est
+début
+    
+fin

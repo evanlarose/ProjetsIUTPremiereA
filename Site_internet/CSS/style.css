@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "fedora";
+  src: url("../Polices/sf_fedora-webfont.woff2") format("woff2"),
+    url("../Polices/sf_fedora-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source";
+  src: url("../Polices/sourcecodepro-regular-webfont.woff2") format("woff2"),
+    url("../Polices/sourcecodepro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sourceBold";
+  src: url("../Polices/sourcecodepro-bold-webfont.woff2") format("woff2"),
+    url("../Polices/sourcecodepro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "source", arial, sans-serif;
+  background-color: #2f1438;
+  color: #ffffff;
+  display: flex;
+  align-content: flex-end;
+  flex-direction: row;
+}
+
+h2,
+article h3 {
+  font-family: "fedora", arial, sans-serif;
+  font-size: 2em;
+  color: #d465a2;
+  text-align: center;
+}
+
+strong {
+  font-family: "sourceBold";
+}
+
+header {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 14em;
+}
+
+header figure {
+  display: inline;
+}
+
+main {
+  padding: 5px;
+  margin-left: 15em;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #4c68c7;
+  display: flex;
+  justify-content: center;
+  margin-left: 15em;
+  margin-bottom: -8px;
+  align-items: center;
+  width: 100%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  font-family: "source";
+}
+
+aside figure{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 500px;
+}
+
+nav {
+  height: 100%;
+  padding: 0 1em;
+  line-height: 3em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #693473;
+  color: #ffa69f;
+  text-align: center;
+  align-items: center;
+  list-style-position: inside;
+  text-shadow: 5px 0 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-image: url(../images/puce.png);
+  position: fixed;
+  left: 0;
+  top: 12em;
+}
+
+nav h2 {
+  color: #ffa69f;
+  text-shadow: 0px 8px 5px black;
+  -webkit-text-stroke: 1px black;
+}
+
+nav h3 {
+  font-family: "sourceBold";
+}
+
+nav a:link h3,
+nav a:visited h3,
+nav a:hover h3,
+nav a:active h3 {
+  color: #ffa69f;
+  font-family: "sourceBold";
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: flex-end;
+  flex-wrap: wrap;
+}
+
+section figure {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+section div {
+  background-color: #ffa69f;
+  padding: 1.5em 0.75em;
+  border-radius: 10px;
+  margin: 2em 1em 2em 4em;
+}
+
+article {
+  background-color: #2f1438;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+}
+
+article div {
+  background-color: #2f1438;
+  margin: 0;
+  padding: 0;
+  line-height: 2.5em;
+  width: 100%;
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+section div article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 98.5%;
+}
+
+h4 {
+  float: right;
+}
+
+#titrenote {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  flex-direction: row;
+  margin-right: -5em;
+}
+
+#titrenote figure {
+  align-items: center;
+  flex-direction: column;
+}
+
+#titrenote div article {
+  padding: 0 2em;
+  width: fit-content;
+}
+
+#synoptrailer {
+  display: flex;
+  flex-direction: row;
+}
+
+#synoptrailer div {
+  width: 46%;
+}
+
+#synoptrailer div article {
+  display: flex;
+  flex-direction: column;
+  width: 97%;
+}
+
+#synoptrailer iframe {
+  height: 280px;
+  width: 500px;
+  margin-left: 30px;
+}
+
+#detailsop {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5em;
+}
+
+#detailsop div {
+  width: 46%;
+}
+
+#detailsop div article {
+  display: flex;
+  flex-direction: column;
+  width: 97%;
+}
+
+#detailsop iframe {
+  height: 280px;
+  width: 500px;
+}
+
+#distrib div article {
+  display: flex;
+  flex-direction: column;
+}
+
+#distrib div article section {
+  display: flex;
+  flex-direction: row;
+}
+
+#distrib div article section figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#distrib div article section figure img {
+  height: 250px;
+  width: 200px;
+}

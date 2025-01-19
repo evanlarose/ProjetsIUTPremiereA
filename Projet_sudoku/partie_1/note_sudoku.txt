@@ -1,0 +1,120 @@
+programme sudoku c'est
+
+	//declaration des constantes
+	constante entier NB_LIGNE := 9;
+	constante entier NB_COLONNE := 9;
+	constante entier VIDE := 0;
+	constante entier FAUX := 0;
+	constante entier VRAI := 1;
+	
+	//prototypes des fonctions et procédures
+	procédure extractionGrilleSud(entF fichierSud : fichier, sortF grilleSud : tableau[NB_LIGNE][NB_COLONNE] de entier, sortF valFixes : tableau[NB_LIGNE][NB_COLONNE]);
+	procédure afficheGrille(entF grille : tableau[NB_LIGNE][NB_COLONNE] de entier);
+	fonction rechercheZdébutero(entF grille : tableau[NB_LIGNE][NB_COLONNE] de entier) délivre entier;
+	procédure demandeSaisies(entF valFixes : tableau[NB_LIGNE][NB_COLONNE] de entier, sortF ligne : entier, sortF colonne : entier, sortF valeur : entier);
+	procédure modifGrille(entF/sortF grille : tableau[NB_LIGNE][NB_COLONNE] de entier, entF ligne : entier, entF colonne : entier, entF valeur : entier);
+	fonction verifGrille(entF grille : tableau[NB_LIGNE][NB_COLONNE] de entier) délivre entier;
+
+	début
+		//declaration des variables
+		fichierSud : fichier;
+		grille : tableau[NB_LIGNE][NB_COLONNE] de entier;
+		valFixes : tableau[NB_LIGNE][NB_COLONNE] de entier;
+		colonne, ligne, valeur : entier;
+		
+		//extraction de la grille .sud
+		procédure extractionGrilleSud(entE fichierSud : fichier, sortE grille : tableau[NB_LIGNE][NB_COLONNE] de entier, sortE valFixes : tableau[NB_LIGNE][NB_COLONNE]);
+
+		//affichage de lancement de partie
+		ecrire("0 = Case Vide");
+		afficheGrille(entE grille : tableau[NB_LIGNE][NB_COLONNE] de entier);
+		
+		//remplissage de la grille par le joueur
+		faire
+			demandeSaisies(entE valFixes : tableau[NB_LIGNE][NB_COLONNE] de entier, sortE ligne : entier, sortE colonne : entier, sortE valeur : entier);
+			modifGrille(entE/sortE grille : tableau[NB_LIGNE][NB_COLONNE] de entier, entE ligne : entier, entE colonne : entier, entE valeur : entier);
+			afficheGrille(entE grille : tableau[NB_LIGNE][NB_COLONNE] de entier);
+			rechercheZero(entE grille : tableau[NB_LIGNE][NB_COLONNE] de entier);
+		tant que (rechercheZero(entE grille : tableau[NB_LIGNE][NB_COLONNE] de entier) == VRAI);
+
+		//verification du remplissage de la grille
+		si (verifGrille(entE grille : tableau[NB_LIGNE][NB_COLONNE] de entier) délivre entier == FAUX) alors
+			ecrire("La grille n’est pas correctement remplie");
+			faire
+				demandeSaisies(entE valFixes : tableau[NB_LIGNE][NB_COLONNE] de entier, sortE ligne : entier, sortE colonne : entier, sortE valeur : entier);
+				modifGrille(entE/sortE grille : tableau[NB_LIGNE][NB_COLONNE] de entier, entE ligne : entier, entE colonne : entier, entE valeur : entier);
+				afficheGrille(entE grille : tableau[NB_LIGNE][NB_COLONNE] de entier);
+				verifGrille(entE grille : tableau[NB_LIGNE][NB_COLONNE] de entier);
+			tant que (verifGrille(entE grille : tableau[NB_LIGNE][NB_COLONNE] de entier) == FAUX);
+		
+		//message de fin de jeu
+		sinon
+			ecrire("Félicitation ! Vous avez compléter la grille");
+		finsi
+	fin
+
+#########################################################################################
+
+Fiches de spécification des fonctions :
+
+	fonction rechercheZero
+	verifie si il reste des 0 dans la grille de sudoku
+
+	paramètre
+	grille(entrée) : tableau[][] de entier, grille de sudoku
+
+	résultat
+	entier, 1 si il reste des 0 dans la grille et 0 dans le cas contraire
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+	fonction verifGrille
+	verifie si la grille est correctement remplie
+
+	paramètre
+	grille(entrée) : tableau[][] de entier, grille de sudoku
+
+	résultat
+	entier, 1 si la grille est remplie correctement et 0 dans le cas contraire
+
+#########################################################################################
+
+Fiches de spécification des procédures :
+
+	procédure extractionGrilleSud
+	extrait les données d'un fichier .sud et les mets dans un tableau
+
+	paramètres
+	fichierSud(entrée) : fichier, fichier .sud contenant la grille de départ
+	grille(sortie) : tableau[][] de entier, grille de sudoku
+	valFixes(sortie) : tableau[][] de entier, grille de départ
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+	procédure afficheGrille
+	affiche la grille de sudoku
+
+	paramètre
+	grille(sortie) : tableau[][], grille de sudoku
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+	procédure demandeSaisies
+	demande à l'utilisateur de saisir la colonne, la ligne et la valeur a insérer(avec contrôle de saisie et vérification des valeurs fixes)
+
+	paramètres
+	valFixes(entrée) : tableau[][] de entier, grille de départ
+	ligne(sortie) : entier, numéro de la ligne de la grille
+	colonne(sortie) : entier, numéro de la colonne de la grille
+	valeur(sortie) : entier, valeur à insérer dans la grille
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+	procédure modifGrille
+	modifie la grille de sudoku
+
+	paramètres
+	grille(entrée/sortie) : tableau[][] de entier, grille de sudoku
+	ligne(entrée) : entier, numéro de la ligne de la grille 
+	colonne(entrée) : entier, numéro de la colonne de la grille
+	valeur(entrée) : entier, valeur à insérer dans la grille

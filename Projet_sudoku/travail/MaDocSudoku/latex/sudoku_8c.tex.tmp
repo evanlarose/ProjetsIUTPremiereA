@@ -1,0 +1,188 @@
+\hypertarget{sudoku_8c}{}\doxysection{Référence du fichier sudoku.\+c}
+\label{sudoku_8c}\index{sudoku.c@{sudoku.c}}
+
+
+programme jeu de sudoku  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Graphe des dépendances par inclusion de sudoku.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~3
+\begin{DoxyCompactList}\small\item\em constante pour la hauteur et la largeur d\textquotesingle{}un bloc \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sudoku_8c_a7b29335add3a553ed85d0e3ace85629c}{TAILLE}}~9
+\begin{DoxyCompactList}\small\item\em constante pour la taille d\textquotesingle{}un bloc \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}\mbox{[}\mbox{\hyperlink{sudoku_8c_a7b29335add3a553ed85d0e3ace85629c}{TAILLE}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8c_a7b29335add3a553ed85d0e3ace85629c}{TAILLE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em type tableau a deux dimensions de taille TAILLE$\ast$\+TAILLE \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sudoku_8c_aeba1131f364a3385e30901935e57cd87}{afficher\+Grille}} (\mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}} g)
+\begin{DoxyCompactList}\small\item\em affiche la grille. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8c_a69cd9f7235b48c38f0b77af85ab869b9}{charger\+Grille}} (\mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}} g)
+\begin{DoxyCompactList}\small\item\em recuperation de la grille appeler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sudoku_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Programme principal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{sudoku_8c_a7528186280906209cca4449a1cf34f7b}{possible}} (\mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}} g, int ligne, int colonne, int valeur)
+\begin{DoxyCompactList}\small\item\em fonction qui indique si il est possible d\textquotesingle{}insérer une valeur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8c_a2c6fc07a99dec24e9310efd926772c51}{saisir}} (int $\ast$adr\+\_\+valeur)
+\begin{DoxyCompactList}\small\item\em permet de saisir un valeur entre 1 et 9 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{sudoku_8c_a16a97c0e261ecc279508c087825e1b10}{zero\+Dans\+Grille}} (\mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}} g)
+\begin{DoxyCompactList}\small\item\em Fonction qui indique si il reste un zero dans la grille. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+programme jeu de sudoku 
+
+\begin{DoxyAuthor}{Auteur}
+Evan Larose
+\end{DoxyAuthor}
+Ce programme propose de jouer une partie de sudoku dans le terminal en appelant une des 10 grilles disponibles 
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{sudoku_8c_a0240ac851181b84ac374872dc5434ee4}\label{sudoku_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\index{sudoku.c@{sudoku.c}!N@{N}}
+\index{N@{N}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~3}
+
+
+
+constante pour la hauteur et la largeur d\textquotesingle{}un bloc 
+
+\mbox{\Hypertarget{sudoku_8c_a7b29335add3a553ed85d0e3ace85629c}\label{sudoku_8c_a7b29335add3a553ed85d0e3ace85629c}} 
+\index{sudoku.c@{sudoku.c}!TAILLE@{TAILLE}}
+\index{TAILLE@{TAILLE}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{TAILLE}{TAILLE}}
+{\footnotesize\ttfamily \#define TAILLE~9}
+
+
+
+constante pour la taille d\textquotesingle{}un bloc 
+
+
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}\label{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}} 
+\index{sudoku.c@{sudoku.c}!tGrille@{tGrille}}
+\index{tGrille@{tGrille}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{tGrille}{tGrille}}
+{\footnotesize\ttfamily t\+Grille}
+
+
+
+type tableau a deux dimensions de taille TAILLE$\ast$\+TAILLE 
+
+Le type t\+Grille sert de de stockage pour la grille de sudoku 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{sudoku_8c_aeba1131f364a3385e30901935e57cd87}\label{sudoku_8c_aeba1131f364a3385e30901935e57cd87}} 
+\index{sudoku.c@{sudoku.c}!afficherGrille@{afficherGrille}}
+\index{afficherGrille@{afficherGrille}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{afficherGrille()}{afficherGrille()}}
+{\footnotesize\ttfamily void afficher\+Grille (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}}]{g }\end{DoxyParamCaption})}
+
+
+
+affiche la grille. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \+: grille a afficher.\\
+\hline
+\end{DoxyParams}
+procedure qui affiche la grille passée en paramètre. \mbox{\Hypertarget{sudoku_8c_a69cd9f7235b48c38f0b77af85ab869b9}\label{sudoku_8c_a69cd9f7235b48c38f0b77af85ab869b9}} 
+\index{sudoku.c@{sudoku.c}!chargerGrille@{chargerGrille}}
+\index{chargerGrille@{chargerGrille}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{chargerGrille()}{chargerGrille()}}
+{\footnotesize\ttfamily void charger\+Grille (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}}]{g }\end{DoxyParamCaption})}
+
+
+
+recuperation de la grille appeler. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \+: grille a recuperer.\\
+\hline
+\end{DoxyParams}
+recuperation de la grille à partir d\textquotesingle{}un fichier dont le nom est lu au clavier. \mbox{\Hypertarget{sudoku_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{sudoku_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{sudoku.c@{sudoku.c}!main@{main}}
+\index{main@{main}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programme principal. 
+
+\begin{DoxyReturn}{Renvoie}
+Code de sortie du programme (0 \+: sortie normale).
+\end{DoxyReturn}
+Le programme principal charge la grille puis l\textquotesingle{}affiche. Il demande ensuite la saisie de la ligne et de la colonne et teste si la case est vide ou non. Si la case est vide il demande la saisie de la valeur a insérer, puis teste la possibilité de le placé dans la case. Puis il repete les actions de l\textquotesingle{}affichage a la verification de la possibilite d\textquotesingle{}insertion tant qu\textquotesingle{}il y a un zero dans la grille. Enfin quand il n\textquotesingle{}y a plus de zero dans la grille il affiche la grille et un message de fin de partie. \mbox{\Hypertarget{sudoku_8c_a7528186280906209cca4449a1cf34f7b}\label{sudoku_8c_a7528186280906209cca4449a1cf34f7b}} 
+\index{sudoku.c@{sudoku.c}!possible@{possible}}
+\index{possible@{possible}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{possible()}{possible()}}
+{\footnotesize\ttfamily bool possible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}}]{g,  }\item[{int}]{ligne,  }\item[{int}]{col,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+
+
+fonction qui indique si il est possible d\textquotesingle{}insérer une valeur 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \+: grille a verifier \\
+\hline
+{\em ligne} & \+: ligne a verifier \\
+\hline
+{\em colonne} & \+: colonne a verifier \\
+\hline
+{\em val} & \+: valeur a inserer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si possible d\textquotesingle{}inserer la valeur false sinon
+\end{DoxyReturn}
+fonction qui indique si il est possible d\textquotesingle{}insérer une valeur a la case indiquée en verifiant la presence de la valeur sur la ligne, la colonne et le bloc de cette case \mbox{\Hypertarget{sudoku_8c_a2c6fc07a99dec24e9310efd926772c51}\label{sudoku_8c_a2c6fc07a99dec24e9310efd926772c51}} 
+\index{sudoku.c@{sudoku.c}!saisir@{saisir}}
+\index{saisir@{saisir}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{saisir()}{saisir()}}
+{\footnotesize\ttfamily void saisir (\begin{DoxyParamCaption}\item[{int $\ast$}]{adr\+\_\+val }\end{DoxyParamCaption})}
+
+
+
+permet de saisir un valeur entre 1 et 9 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em adr\+\_\+val} & \+: valeur saisie au clavier\\
+\hline
+\end{DoxyParams}
+procedure permettant de saisir les valeurs de colonne, ligne et valeur à insérer \mbox{\Hypertarget{sudoku_8c_a16a97c0e261ecc279508c087825e1b10}\label{sudoku_8c_a16a97c0e261ecc279508c087825e1b10}} 
+\index{sudoku.c@{sudoku.c}!zeroDansGrille@{zeroDansGrille}}
+\index{zeroDansGrille@{zeroDansGrille}!sudoku.c@{sudoku.c}}
+\doxysubsubsection{\texorpdfstring{zeroDansGrille()}{zeroDansGrille()}}
+{\footnotesize\ttfamily bool zero\+Dans\+Grille (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sudoku_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}}]{g }\end{DoxyParamCaption})}
+
+
+
+Fonction qui indique si il reste un zero dans la grille. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \+: grille a verifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si il reste un zero, false sinon.
+\end{DoxyReturn}
+fonction qui verifie si la grille est remplie ou non en verifiant la présence d\textquotesingle{}un zero 
